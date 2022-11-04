@@ -1,0 +1,23 @@
+<h1>Hello, world.</h1>
+<div>
+    {% if user.is_authenticated %}
+        {{ user.username }} さん
+        <div>
+            <a href="/blog/mypage">マイページ</a>
+        </div>
+        <div>
+            <a href="/blog/logout">ログアウト</a>
+        </div>
+    {% else %}
+        ログインしていません
+        <div>
+            <a href="/blog/register">アカウント登録</a>
+        </div>
+        <div>
+            <a href="/blog/login">ログイン</a>
+        </div>
+    {% endif %}
+</div>
+<div>
+    <a href="/blog/detail">detail</a>
+</div>
